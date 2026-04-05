@@ -3,6 +3,7 @@
 
 <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <title>Групи 2026</title>
         <link rel="icon" type="image/png" href="favicon.jpg">
         <style>
@@ -119,6 +120,18 @@
                 a:hover {
                         text-decoration: underline;
                         color: #003d82;
+                }
+                /* АДАПТАЦІЯ ДЛЯ ТЕЛЕФОНІВ */
+                @media (max-width: 768px) {
+                        body {
+                                padding: 10px; /* Робимо трохи менші відступи по краях для економії місця */
+                        }
+                        .container {
+                                min-width: 100%; /* Тепер кожна колонка буде займати всю ширину екрана */
+                                box-sizing: border-box; /* Щоб відступи не ламали ширину */
+                                max-height: none; /* Прибираємо внутрішній скрол — на телефоні зручніше гортати сайт як єдину стрічку */
+                                overflow-y: visible;
+                        }
                 }
         </style>
 </head>
