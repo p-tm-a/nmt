@@ -37,11 +37,11 @@
                         padding-bottom: 10px;
                         font-size: 18px;
                         position: sticky;
-                        top: 0;
+                        top: -20px; /* Піднімаємо вище, щоб закрити стандартний відступ */
                         background: white;
                         margin-top: 0;
-                        padding-top: 10px;
-                        z-index: 5;
+                        padding-top: 20px; /* Компенсуємо підйом */
+                        z-index: 20; /* Ставимо максимальний пріоритет видимості */
                 }
 
                 .module-header {
@@ -78,9 +78,10 @@
                 .btn-main {
                         width: 100%;
                         position: sticky;
-                        top: 45px;
-                        z-index: 10;
+                        top: 35px; /* Підтягуємо кнопку впритул до заголовка */
+                        z-index: 20;
                         margin-bottom: 15px;
+                        box-shadow: 0 -20px 0 0 white; /* МАГІЯ: додаємо суцільну білу тінь зверху, яка замазує будь-які щілини */
                 }
 
                 .btn-sm {
