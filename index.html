@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Classtime: Панель сесій</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+            background-color: #f8f9fa;
+            margin: 0;
+        }
+
+        .wrapper {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            min-width: 330px;
+            max-height: 85vh;
+            overflow-y: auto;
+        }
+
+        /* Головні заголовки (закріплені) */
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #28a745;
+            padding-bottom: 10px;
+            font-size: 18px;
+            position: sticky;
+            top: 0;
+            background: white;
+            margin-top: 0;
+            padding-top: 10px;
+            z-index: 5;
+        }
+
+        /* Заголовки модулів з кнопками */
+        .module-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #e2e8f0;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin: 15px 0 10px 0;
+        }
+
+        .module-header h3 {
+            margin: 0;
+            font-size: 15px;
+            color: #1a202c;
+        }
+
+        /* Кнопки */
+        button {
+            padding: 10px 15px;
+            font-size: 14px;
+            cursor: pointer;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        /* Головні кнопки груп (закріплені) */
+        .btn-main {
+            width: 100%;
+            position: sticky;
+            top: 45px;
+            z-index: 10;
+            margin-bottom: 15px;
+        }
+
+        /* Маленькі кнопки модулів */
+        .btn-sm {
+            padding: 5px 10px;
+            font-size: 12px;
+            background-color: #007bff;
+        }
+
+        .btn-sm:hover {
+            background-color: #0056b3;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+            padding: 10px;
+            background-color: #f1f5f9;
+            border-radius: 4px;
+            font-size: 13px;
+            line-height: 1.4;
+        }
+
+        a {
+            text-decoration: none;
+            color: #0056b3;
+            font-weight: bold;
+            display: block;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #003d82;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <div class="container">
+            <h2>📚 Групи НМТ 2026</h2>
+            <button class="btn-main" onclick="openLinks('list-nmt')">Відкрити всі (8)</button>
+            <div id="list-nmt">
+                <ul>
+                    <li><a href="https://www.classtime.com/sessions/T2F3R4" target="_blank">Сесія T2F3R4 (НМТ №8)</a>
+                    </li>
+                    <li><a href="https://www.classtime.com/sessions/AHXQXJ" target="_blank">Сесія AHXQXJ (НМТ №7)</a>
+                    </li>
+                    <li><a href="https://www.classtime.com/sessions/HFXSII" target="_blank">Сесія HFXSII (НМТ №6)</a>
+                    </li>
+                    <li><a href="https://www.classtime.com/sessions/7XUT6N" target="_blank">Сесія 7XUT6N (НМТ №5)</a>
+                    </li>
+                    <li><a href="https://www.classtime.com/sessions/CF4S5R" target="_blank">Сесія CF4S5R (НМТ №4)</a>
+                    </li>
+                    <li><a href="https://www.classtime.com/sessions/VI6TNE" target="_blank">Сесія VI6TNE (НМТ №3)</a>
+                    </li>
+                    <li><a href="https://www.classtime.com/sessions/HUBSPM" target="_blank">Сесія HUBSPM (НМТ №2)</a>
+                    </li>
+                    <li><a href="https://www.classtime.com/sessions/KUXMN6" target="_blank">Сесія KUXMN6 (НМТ №1)</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2>📘 Група 1</h2>
+            <button class="btn-main" onclick="openLinks('group1-all')">Відкрити абсолютно всі (54)</button>
+
+            <div id="group1-all">
+                <div class="module-header">
+                    <h3>Модуль 1</h3>
+                    <button class="btn-sm" onclick="openLinks('g1-m1')">Відкрити Модуль 1</button>
+                </div>
+                <ul id="g1-m1">
+                    <li><a href="https://www.classtime.com/sessions/7A5MS9" target="_blank">7A5MS9: 1.1. Числові
+                            множини. Порівняння чисел. Числові проміжки</a></li>
+                    <li><a href="https://www.classtime.com/sessions/KS7AQW" target="_blank">KS7AQW: ДЗ №1.1. Числові
+                            множини. Порівняння чисел...</a></li>
+                    <li><a href="https://www.classtime.com/sessions/JC43FK" target="_blank">JC43FK: 1.2. Арифметичні
+                            лайфхаки. Цілі числа...</a></li>
+                    <li><a href="https://www.classtime.com/sessions/A33TFV" target="_blank">A33TFV: ДЗ №1.2. Цілі числа.
+                            Модуль. Звичайні дроби</a></li>
+                    <li><a href="https://www.classtime.com/sessions/AFB5HC" target="_blank">AFB5HC: 1.3. Десяткові
+                            дроби. Округлення чисел</a></li>
+                    <li><a href="https://www.classtime.com/sessions/HIP2FD" target="_blank">HIP2FD: ДЗ №1.3. Десяткові
+                            дроби</a></li>
+                    <li><a href="https://www.classtime.com/sessions/DR8IUK" target="_blank">DR8IUK: Тест 1.4. Степені.
+                            Цілі вирази</a></li>
+                    <li><a href="https://www.classtime.com/sessions/C6EXI5" target="_blank">C6EXI5: ДЗ №1.4. Степінь</a>
+                    </li>
+                    <li><a href="https://www.classtime.com/sessions/T8WBSH" target="_blank">T8WBSH: Тест 1.5. ФСМ</a>
+                    </li>
+                    <li><a href="https://www.classtime.com/sessions/YJNHU2" target="_blank">YJNHU2: ДЗ №1.5. Цілі
+                            вирази. ФСМ</a></li>
+                    <li><a href="https://www.classtime.com/sessions/8HP6T8" target="_blank">8HP6T8: Тест 1.6.
+                            Розкладання на множники. Скорочення дробів</a></li>
+                    <li><a href="https://www.classtime.com/sessions/FANAFQ" target="_blank">FANAFQ: ДЗ №1.6. Розкладання
+                            на множники. Скорочення дробів</a></li>
+                    <li><a href="https://www.classtime.com/sessions/NM2U98" target="_blank">NM2U98: Тест 1.7. Дробові
+                            вирази</a></li>
+                    <li><a href="https://www.classtime.com/sessions/XUVD6K" target="_blank">XUVD6K: ДЗ №1.7. Дробові
+                            вирази</a></li>
+                    <li><a href="https://www.classtime.com/sessions/CRVTVK" target="_blank">CRVTVK: Тест 1.8.
+                            Ірраціональні вирази</a></li>
+                    <li><a href="https://www.classtime.com/sessions/5T4P4B" target="_blank">5T4P4B: ДЗ №1.8. Корені</a>
+                    </li>
+                </ul>
+
+                <div class="module-header">
+                    <h3>Модуль 2</h3>
+                    <button class="btn-sm" onclick="openLinks('g1-m2')">Відкрити Модуль 2</button>
+                </div>
+                <ul id="g1-m2">
+                    <li><a href="https://www.classtime.com/sessions/TCJG9B" target="_blank">TCJG9B: Тест 2.1. Лінійні і
+                            квадратні рівняння</a></li>
+                    <li><a href="https://www.classtime.com/sessions/KT7WHJ" target="_blank">KT7WHJ: ДЗ №2.1. Лінійні і
+                            квадратні рівняння</a></li>
+                    <li><a href="https://www.classtime.com/sessions/W27FZZ" target="_blank">W27FZZ: Тест 2.2. Рівняння:
+                            дробові, з модулем, ірраціональні</a></li>
+                    <li><a href="https://www.classtime.com/sessions/UBC3AC" target="_blank">UBC3AC: ДЗ №2.2. Рівняння:
+                            дробові, з модулем, ірраціональні</a></li>
+                    <li><a href="https://www.classtime.com/sessions/3NTMUN" target="_blank">3NTMUN: Тест 2.3. Системи
+                            рівнянь</a></li>
+                    <li><a href="https://www.classtime.com/sessions/7IYYU7" target="_blank">7IYYU7: ДЗ №2.3. Системи +
+                            повторення</a></li>
+                    <li><a href="https://www.classtime.com/sessions/NC8C2H" target="_blank">NC8C2H: ДЗ №2.4.
+                            Ірраціональні вирази</a></li>
+                    <li><a href="https://www.classtime.com/sessions/FMHKA6" target="_blank">FMHKA6: Тест 2.5. Вступ до
+                            планіметрії. Кути у фігурах</a></li>
+                    <li><a href="https://www.classtime.com/sessions/QGCJSF" target="_blank">QGCJSF: ДЗ №2.5. Відрізки і
+                            кути. Кути у фігурах</a></li>
+                    <li><a href="https://www.classtime.com/sessions/3VCHED" target="_blank">3VCHED: ДЗ №2.6-2.7. Формули
+                            площ</a></li>
+                    <li><a href="https://www.classtime.com/sessions/H2YNP4" target="_blank">H2YNP4: Тест 2.8.
+                            Прямокутний трикутник</a></li>
+                    <li><a href="https://www.classtime.com/sessions/VH8TDB" target="_blank">VH8TDB: ДЗ №2.8. Прямокутний
+                            трикутник</a></li>
+                </ul>
+
+                <div class="module-header">
+                    <h3>Модуль 3</h3>
+                    <button class="btn-sm" onclick="openLinks('g1-m3')">Відкрити Модуль 3</button>
+                </div>
+                <ul id="g1-m3">
+                    <li><a href="https://www.classtime.com/sessions/VFIZCR" target="_blank">VFIZCR: Тест 3.1. Коло і
+                            круг</a></li>
+                    <li><a href="https://www.classtime.com/sessions/QGEJSJ" target="_blank">QGEJSJ: ДЗ №3.1. Коло і
+                            круг</a></li>
+                    <li><a href="https://www.classtime.com/sessions/N3C4HK" target="_blank">N3C4HK: Тест 3.2-3.3.
+                            Трикутники</a></li>
+                    <li><a href="https://www.classtime.com/sessions/YYVT46" target="_blank">YYVT46: ДЗ №3.2-3.3.
+                            Трикутники</a></li>
+                    <li><a href="https://www.classtime.com/sessions/8ICV9V" target="_blank">8ICV9V: Тест 3.4. Трикутник
+                            і коло</a></li>
+                    <li><a href="https://www.classtime.com/sessions/CGJHIW" target="_blank">CGJHIW: ДЗ №3.4. Трикутник і
+                            коло</a></li>
+                    <li><a href="https://www.classtime.com/sessions/RHAKAX" target="_blank">RHAKAX: Тест 3.5. Лінійні і
+                            квадратні нерівності</a></li>
+                    <li><a href="https://www.classtime.com/sessions/A2XP6N" target="_blank">A2XP6N: ДЗ №3.5. Лінійні і
+                            квадратні нерівності</a></li>
+                    <li><a href="https://www.classtime.com/sessions/XIINWA" target="_blank">XIINWA: Тест 3.6. Системи
+                            нерівностей. Нерівності з модулем</a></li>
